@@ -21,11 +21,11 @@ public class SearchController {
 
     @RequestMapping(value = "/validate", method = RequestMethod.GET)
     public ModelAndView validateName() {
-        return new ModelAndView("search", "userFromServer", new ProductDB(""));
+        return new ModelAndView("search", "productFromServer", new ProductDB(""));
     }
 
     @RequestMapping(value = "/check", method = RequestMethod.POST)
-    public ModelAndView checkUser(@ModelAttribute("userFromServer") ProductDB productDB) {
+    public ModelAndView checkUser(@ModelAttribute("productFromServer") ProductDB productDB) {
         return searchingService.checkName(productDB);
     }
 }

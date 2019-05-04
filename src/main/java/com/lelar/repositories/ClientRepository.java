@@ -23,6 +23,7 @@ public class ClientRepository {
         em.getTransaction().begin();
         Client client = get(id);
         em.getTransaction().commit();
+
         return client;
     }
 

@@ -12,12 +12,12 @@ public class User {
     }
 
     public User(String login, String password, String name, String patronymic, String surname, String mail) {
-        this.login = login;
-        this.password = password;
-        this.name = name;
-        this.patronymic = patronymic;
-        this.surname = surname;
-        this.mail = mail;
+        User.login = login;
+        User.password = password;
+        User.name = name;
+        User.patronymic = patronymic;
+        User.surname = surname;
+        User.mail = mail;
     }
 
     public User(String login, String password) {

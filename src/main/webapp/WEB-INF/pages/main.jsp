@@ -1,3 +1,4 @@
+<%@ page import="com.lelar.User" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
@@ -77,11 +78,21 @@
                 </div>
 
                 <div class="shop_sing_item">
+                    <%--                    <%=request.getParameter("login")%>--%>
+                    <%
+                        String user = new User().getLogin();
+                        if (user == null) {
+                    %>
                     <a href="/registration/validate"><img src="/resources/img/icon/user-icon.png" alt="">Register</a>
                     <span>or</span>
                     <a href="/authorization/validate">Sign in</a>
-
-                    (${user.login})
+                    <%
+                    } else {
+                    %>
+                    <%=user%>
+                    <a href="/authorization/exit">exit</a>
+                    <%}%>
+                    <%--                    (${user.login})--%>
                 </div>
 
             </div>
@@ -110,7 +121,7 @@
                 <div class="shop_cart">
                     <div class="shop_cart_inner">
                         <%--<a href="#"><i class="fa fa-heart-o"></i></a>--%>
-                        <a href="#"><img src="/resources/img/icon/s-bag-icon.png" alt=""></a>
+                        <a href="/move/basket"><img src="/resources/img/icon/s-bag-icon.png" alt=""></a>
                         <%--<a href="#">$ 3 215.99</a>--%>
                     </div>
                 </div>
@@ -148,41 +159,41 @@
                                 <div class="mega_item">
                                     <h4>MEN’S FASHION</h4>
                                     <ul>
-                                        <li><a href="#">Armchairs</a></li>
-                                        <li><a href="#">Tables</a></li>
-                                        <li><a href="#">Bar furniture</a></li>
-                                        <li><a href="#">Сouches</a></li>
-                                        <li><a href="#">Fridges</a></li>
+                                        <li><a href="/move/armchair">Armchairs</a></li>
+                                        <li><a href="/move/table">Tables</a></li>
+                                        <li><a href="/move/bar">Bar furniture</a></li>
+                                        <li><a href="/move/couches">Сouches</a></li>
+                                        <li><a href="/move/fridge">Fridges</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
                                     <h4>WOMEN FASHION</h4>
                                     <ul>
-                                        <li><a href="#">Mirrors</a></li>
-                                        <li><a href="#">The beds</a></li>
-                                        <li><a href="#">Sofas</a></li>
-                                        <li><a href="#">Ovens</a></li>
-                                        <li><a href="#">
+                                        <li><a href="/move/mirror">Mirrors</a></li>
+                                        <li><a href="/move/bed">The beds</a></li>
+                                        <li><a href="/move/sofa">Sofas</a></li>
+                                        <li><a href="/move/oven">Ovens</a></li>
+                                        <li><a href="/move/dress">
                                             Dressing tables</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
                                     <h4>ACCESSORIES</h4>
                                     <ul>
-                                        <li><a href="#">Clocks</a></li>
-                                        <li><a href="#">Curtains</a></li>
-                                        <li><a href="#">Poufs</a></li>
-                                        <li><a href="#">Paintings</a></li>
-                                        <li><a href="#">Boxes</a></li>
+                                        <li><a href="/move/clock">Clocks</a></li>
+                                        <li><a href="/move/curtain">Curtains</a></li>
+                                        <li><a href="/move/pouf">Poufs</a></li>
+                                        <li><a href="/move/painting">Paintings</a></li>
+                                        <li><a href="/move/box">Boxes</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
                                     <h4>OTHER</h4>
                                     <ul>
-                                        <li><a href="#">Garden furniture</a></li>
-                                        <li><a href="#">Furniture for TV</a></li>
-                                        <li><a href="#">Sinks</a></li>
-                                        <li><a href="#">Beer</a></li>
+                                        <li><a href="/move/garden">Garden furniture</a></li>
+                                        <li><a href="/move/tv">Furniture for TV</a></li>
+                                        <li><a href="/move/sink">Sinks</a></li>
+                                        <li><a href="/move/glove">Glove</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
@@ -279,7 +290,7 @@
                              data-textAlign="['left','left','left','left']"
                              data-splitout="none"
                              data-responsive_offset="on">
-                            <a href="#" class="shop_now_btn">Shop Now</a>
+                            <a href="/move/pouf" class="shop_now_btn">Shop Now</a>
                         </div>
                     </div>
                 </li>
@@ -354,7 +365,7 @@
                              data-textAlign="['left','left','left','left']"
                              data-splitout="none"
                              data-responsive_offset="on">
-                            <a href="#" class="shop_now_btn">Shop Now</a>
+                            <a href="/move/bed" class="shop_now_btn">Shop Now</a>
                         </div>
                     </div>
                 </li>

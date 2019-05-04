@@ -1,4 +1,5 @@
-<%@ page import="com.lelar.tables.Product" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+<%@ page import="com.lelar.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,11 +77,20 @@
                 </div>
 
                 <div class="shop_sing_item">
+
+                    <%
+                        String user = new User().getLogin();
+                        if (user == null) {
+                    %>
                     <a href="/registration/validate"><img src="/resources/img/icon/user-icon.png" alt="">Register</a>
                     <span>or</span>
                     <a href="/authorization/validate">Sign in</a>
-
-                    <%--(${user.login})--%>
+                    <%
+                    } else {
+                    %>
+                    <%=user%>
+                    <%}%>
+                    <%--                    (${product.user.login})--%>
                 </div>
 
             </div>
@@ -109,7 +119,7 @@
                 <div class="shop_cart">
                     <div class="shop_cart_inner">
                         <%--<a href="#"><i class="fa fa-heart-o"></i></a>--%>
-                        <a href="#"><img src="/resources/img/icon/s-bag-icon.png" alt=""></a>
+                        <a href="/move/basket"><img src="/resources/img/icon/s-bag-icon.png" alt=""></a>
                         <%--<a href="#">$ 3 215.99</a>--%>
                     </div>
                 </div>
@@ -155,41 +165,41 @@
                                 <div class="mega_item">
                                     <h4>MEN’S FASHION</h4>
                                     <ul>
-                                        <li><a href="#">Armchairs</a></li>
-                                        <li><a href="#">Tables</a></li>
-                                        <li><a href="#">Bar furniture</a></li>
-                                        <li><a href="#">Сouches</a></li>
-                                        <li><a href="#">Fridges</a></li>
+                                        <li><a href="/move/armchair">Armchairs</a></li>
+                                        <li><a href="/move/table">Tables</a></li>
+                                        <li><a href="/move/bar">Bar furniture</a></li>
+                                        <li><a href="/move/couches">Сouches</a></li>
+                                        <li><a href="/move/fridge">Fridges</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
                                     <h4>WOMEN FASHION</h4>
                                     <ul>
-                                        <li><a href="#">Mirrors</a></li>
-                                        <li><a href="#">The beds</a></li>
-                                        <li><a href="#">Sofas</a></li>
-                                        <li><a href="#">Ovens</a></li>
-                                        <li><a href="#">
+                                        <li><a href="/move/mirror">Mirrors</a></li>
+                                        <li><a href="/move/bed">The beds</a></li>
+                                        <li><a href="/move/sofa">Sofas</a></li>
+                                        <li><a href="/move/oven">Ovens</a></li>
+                                        <li><a href="/move/dress">
                                             Dressing tables</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
                                     <h4>ACCESSORIES</h4>
                                     <ul>
-                                        <li><a href="#">Clocks</a></li>
-                                        <li><a href="#">Curtains</a></li>
-                                        <li><a href="#">Poufs</a></li>
-                                        <li><a href="#">Paintings</a></li>
-                                        <li><a href="#">Boxes</a></li>
+                                        <li><a href="/move/clock">Clocks</a></li>
+                                        <li><a href="/move/curtain">Curtains</a></li>
+                                        <li><a href="/move/pouf">Poufs</a></li>
+                                        <li><a href="/move/painting">Paintings</a></li>
+                                        <li><a href="/move/box">Boxes</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
                                     <h4>OTHER</h4>
                                     <ul>
-                                        <li><a href="#">Garden furniture</a></li>
-                                        <li><a href="#">Furniture for TV</a></li>
-                                        <li><a href="#">Sinks</a></li>
-                                        <li><a href="#">Beer</a></li>
+                                        <li><a href="/move/garden">Garden furniture</a></li>
+                                        <li><a href="/move/tv">Furniture for TV</a></li>
+                                        <li><a href="/move/sink">Sinks</a></li>
+                                        <li><a href="/move/glove">Glove</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
@@ -301,15 +311,25 @@
                     <%--product level.</p>--%>
                     <%--</div>--%>
                     <div class="add_cart_btn">
-                        <div class="product_count">
-                            <input type="text" name="qty" id="sst" maxlength="12" value="03" title="Quantity:"
-                                   class="input-text qty">
-                            <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                    class="reduced items-count" type="button"><i class="ti-minus"></i></button>
-                            <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                    class="increase items-count" type="button"><i class="ti-plus"></i></button>
-                        </div>
-                        <a class="cart_btn" href="#">add to cart</a>
+<%--                        <div class="product_count">--%>
+<%--                            <input type="text" name="qty" id="sst" maxlength="12" value="03" title="Quantity:"--%>
+<%--                                   class="input-text qty">--%>
+<%--                            <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"--%>
+<%--                                    class="reduced items-count" type="button"><i class="ti-minus"></i></button>--%>
+<%--                            <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"--%>
+<%--                                    class="increase items-count" type="button"><i class="ti-plus"></i></button>--%>
+<%--                        </div>--%>
+                        <%
+                            if (user == null) {
+                        %>
+                        <a class="cart_btn" href="/authorization/validate">Sign in</a>
+                        <%
+                        } else {
+                        %>
+<%--                        <button class="cart_btn" href="/basket/validate">add to cart</button>--%>
+                        <a class="cart_btn" href="/basket/validate">add to cart</a>
+
+                        <%}%>
                         <%--<ul>--%>
                         <%--<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>--%>
                         <%--<li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>--%>

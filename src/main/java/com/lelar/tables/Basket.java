@@ -32,4 +32,20 @@ public class Basket {
         this.clientId = clientRepository.getId(clientId);
         clientRepository.end();
     }
+
+    public Client getClientId() {
+        return clientId;
+    }
+
+    public Product getProductId() {
+        return productId;
+    }
+
+    public Basket(Client clientId, Product productId) {
+        this.clientId = clientId;
+        this.productId = productId;
+    }
+
+    public Basket() {
+    }
 }

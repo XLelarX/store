@@ -112,9 +112,8 @@
         <%--<p class="message">Not registered? <a href="#">Create an account</a></p>--%>
         <%--</form>--%>
 
-        <spring:form modelAttribute="userFromServer" method="post" action="/search/check">
+        <spring:form modelAttribute="productFromServer" method="post" action="/search/check">
             <spring:input path="name" placeholder="product name"/>
-
             <spring:button>Search</spring:button>
         </spring:form>
 

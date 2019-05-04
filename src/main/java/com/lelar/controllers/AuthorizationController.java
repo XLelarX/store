@@ -1,5 +1,7 @@
 package com.lelar.controllers;
 
+import com.lelar.BasketDB;
+import com.lelar.repositories.BasketRepository;
 import com.lelar.services.AuthorizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,5 +27,10 @@ public class AuthorizationController {
     @RequestMapping(value = "/check", method = RequestMethod.POST)
     public ModelAndView checkUser(@ModelAttribute("userFromServer") User user) {
         return authorizationService.checkUser(user);
+    }
+
+    @RequestMapping(value = "/exit", method = RequestMethod.GET)
+    public ModelAndView exit() {
+        return authorizationService.exit();
     }
 }

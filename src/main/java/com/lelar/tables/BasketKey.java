@@ -21,4 +21,12 @@ public class BasketKey implements Serializable {
     public void setProductId(Product productId) {
         this.productId = productId;
     }
+
+    public BasketKey(Client clientId, Product productId) {
+        this.clientId = clientId;
+        this.productId = productId;
+    }
+
+    public BasketKey() {
+    }
 }

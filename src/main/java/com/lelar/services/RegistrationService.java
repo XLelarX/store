@@ -34,7 +34,7 @@ public class RegistrationService {
         } else
             return new ModelAndView("registration", "userFromServer", user);
 
-        return new ModelAndView("main", "user", user);
+        return new ModelAndView("main");
     }
 
     private boolean notHaveEmptyField(User user) {

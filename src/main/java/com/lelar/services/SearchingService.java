@@ -27,7 +27,7 @@ public class SearchingService {
             if (areEqual(e, productDB.getName()))
                 return new ModelAndView("product", "product", e);
 
-        return new ModelAndView("search", "userFromServer", productDB);
+        return new ModelAndView("search", "productFromServer", productDB);
     }
 
     private boolean areEqual(Product productFromDB, String name) {

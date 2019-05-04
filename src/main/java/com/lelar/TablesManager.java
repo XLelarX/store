@@ -66,7 +66,7 @@ class TablesManager {
 //                Basket basket = new Basket();
 //
 //                for (Object[] row : getRows(fileName)) {
-//                    basket.setClientId((Integer) row[0]);
+//                    basket.setClientId(row[0].toString());
 //                    basket.setProductId((Integer) row[1]);
 //                    basketService.add(basket);
 //                }
