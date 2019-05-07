@@ -107,15 +107,15 @@
     <div class="form">
 
         <spring:form modelAttribute="userFromServer" method="post" action="/registration/check">
-            <spring:input path="surname" placeholder="surname"/>
-            <spring:input path="name" placeholder="name"/>
-            <spring:input path="patronymic" placeholder="patronymic"/>
-            <spring:input path="login" placeholder="login"/>
-            <spring:input path="password" placeholder="password"/>
+            <spring:input path="surname" placeholder="Фамилия"/>
+            <spring:input path="name" placeholder="Имя"/>
+            <spring:input path="patronymic" placeholder="Отчество"/>
+            <spring:input path="login" placeholder="Логин"/>
+            <spring:input path="password" placeholder="Пароль"/>
             <spring:input path="mail" placeholder="mail"/>
 
 
-            <spring:button>Registration</spring:button>
+            <spring:button>Регистрация</spring:button>
         </spring:form>
 
     </div>

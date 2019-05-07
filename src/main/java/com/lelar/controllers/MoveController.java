@@ -31,96 +31,96 @@ public class MoveController {
 
     @RequestMapping(value = "/armchair", method = RequestMethod.GET)
     public ModelAndView goToArmchair() {
-        return searchingService.checkName(new ProductDB("Armchair"));
+        return searchingService.checkName(new ProductDB("Кресло"));
     }
 
     @RequestMapping(value = "/table", method = RequestMethod.GET)
     public ModelAndView goToTable() {
-        return searchingService.checkName(new ProductDB("Table"));
+        return searchingService.checkName(new ProductDB("Стол"));
     }
 
     @RequestMapping(value = "/bar", method = RequestMethod.GET)
     public ModelAndView goToBar() {
-        return searchingService.checkName(new ProductDB("Bar_Chair"));
+        return searchingService.checkName(new ProductDB("Барный стул"));
     }
 
     @RequestMapping(value = "/couches", method = RequestMethod.GET)
     public ModelAndView goToCouches() {
-        return searchingService.checkName(new ProductDB("Couch"));
+        return searchingService.checkName(new ProductDB("Диван"));
     }
 
     @RequestMapping(value = "/mirror", method = RequestMethod.GET)
     public ModelAndView goToMirror() {
-        return searchingService.checkName(new ProductDB("Mirror"));
+        return searchingService.checkName(new ProductDB("Зеркало"));
     }
 
     @RequestMapping(value = "/clock", method = RequestMethod.GET)
     public ModelAndView goToClock() {
-        return searchingService.checkName(new ProductDB("Clock"));
+        return searchingService.checkName(new ProductDB("Часы"));
     }
 
     @RequestMapping(value = "/curtain", method = RequestMethod.GET)
     public ModelAndView goToCurtain() {
-        return searchingService.checkName(new ProductDB("Curtain"));
+        return searchingService.checkName(new ProductDB("Занавески"));
     }
 
     @RequestMapping(value = "/sink", method = RequestMethod.GET)
     public ModelAndView goToSink() {
-        return searchingService.checkName(new ProductDB("Sink"));
+        return searchingService.checkName(new ProductDB("Раковина"));
     }
 
     @RequestMapping(value = "/box", method = RequestMethod.GET)
     public ModelAndView goToBox() {
-        return searchingService.checkName(new ProductDB("Box"));
+        return searchingService.checkName(new ProductDB("Коробка"));
     }
 
     @RequestMapping(value = "/tv", method = RequestMethod.GET)
     public ModelAndView goToTV() {
-        return searchingService.checkName(new ProductDB("TV_Table"));
+        return searchingService.checkName(new ProductDB("Тумба под телевизор"));
     }
 
     @RequestMapping(value = "/garden", method = RequestMethod.GET)
     public ModelAndView goToGarden() {
-        return searchingService.checkName(new ProductDB("Garden_Table"));
+        return searchingService.checkName(new ProductDB("Садовый стол"));
     }
 
     @RequestMapping(value = "/pouf", method = RequestMethod.GET)
     public ModelAndView goToPouf() {
-        return searchingService.checkName(new ProductDB("Pouf"));
+        return searchingService.checkName(new ProductDB("Пуф"));
     }
 
     @RequestMapping(value = "/painting", method = RequestMethod.GET)
     public ModelAndView goToPainting() {
-        return searchingService.checkName(new ProductDB("Painting"));
+        return searchingService.checkName(new ProductDB("Картина"));
     }
 
     @RequestMapping(value = "/oven", method = RequestMethod.GET)
     public ModelAndView goToOven() {
-        return searchingService.checkName(new ProductDB("Oven"));
+        return searchingService.checkName(new ProductDB("Духовка"));
     }
 
     @RequestMapping(value = "/sofa", method = RequestMethod.GET)
     public ModelAndView goToSofa() {
-        return searchingService.checkName(new ProductDB("Sofa"));
+        return searchingService.checkName(new ProductDB("Софа"));
     }
 
     @RequestMapping(value = "/fridge", method = RequestMethod.GET)
     public ModelAndView goToFridge() {
-        return searchingService.checkName(new ProductDB("Fridge"));
+        return searchingService.checkName(new ProductDB("Холодильник"));
     }
 
     @RequestMapping(value = "/bed", method = RequestMethod.GET)
     public ModelAndView goToBed() {
-        return searchingService.checkName(new ProductDB("Bed"));
+        return searchingService.checkName(new ProductDB("Кровать"));
     }
 
     @RequestMapping(value = "/dress", method = RequestMethod.GET)
     public ModelAndView goToDress() {
-        return searchingService.checkName(new ProductDB("Dressing_Table"));
+        return searchingService.checkName(new ProductDB("Туалетный стол"));
     }
 
     @RequestMapping(value = "/glove", method = RequestMethod.GET)
     public ModelAndView goToGlove() {
-        return searchingService.checkName(new ProductDB("Glove"));
+        return searchingService.checkName(new ProductDB("Перчатка"));
     }
 }

@@ -11,7 +11,7 @@
 
     <link rel="icon" href="/resources/img/fav-icon.png" type="image/x-icon"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Variant Store</title>
+    <title>Прототип магазина</title>
 
     <!-- Icon css link -->
     <link href="/resources/css/font-awesome.min.css" rel="stylesheet">
@@ -71,9 +71,9 @@
 
                 <div class="shop_sing_item">
                     <select class="selectpicker">
-                        <option>$ Dollar (US)</option>
-                        <option>₽ Rubles (RUB)</option>
-                        <option>€ Euro (EUR)</option>
+                        <option>₽ Рубли (RUB)</option>
+                        <option>$ Доллары (US)</option>
+                        <option>€ Евро (EUR)</option>
                     </select>
                 </div>
 
@@ -83,14 +83,14 @@
                         String user = new User().getLogin();
                         if (user == null) {
                     %>
-                    <a href="/registration/validate"><img src="/resources/img/icon/user-icon.png" alt="">Register</a>
-                    <span>or</span>
-                    <a href="/authorization/validate">Sign in</a>
+                    <a href="/registration/validate"><img src="/resources/img/icon/user-icon.png" alt="">Регистрация</a>
+                    <span>или</span>
+                    <a href="/authorization/validate">Войти</a>
                     <%
                     } else {
                     %>
                     <%=user%>
-                    <a href="/authorization/exit">exit</a>
+                    <a href="/authorization/exit">Выйти</a>
                     <%}%>
                     <%--                    (${user.login})--%>
                 </div>
@@ -152,48 +152,48 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="hot mega_menu dropdown">
+                        <li class="mega_menu dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">GoodDeals</a>
+                               aria-haspopup="true" aria-expanded="false">Каталог</a>
                             <div class="mega_menu_inner dropdown-menu">
                                 <div class="mega_item">
-                                    <h4>MEN’S FASHION</h4>
+                                    <h4>МУЖСКОЙ ВЫБОР</h4>
                                     <ul>
-                                        <li><a href="/move/armchair">Armchairs</a></li>
-                                        <li><a href="/move/table">Tables</a></li>
-                                        <li><a href="/move/bar">Bar furniture</a></li>
-                                        <li><a href="/move/couches">Сouches</a></li>
-                                        <li><a href="/move/fridge">Fridges</a></li>
+                                        <li><a href="/move/armchair">Кресло</a></li>
+                                        <li><a href="/move/table">Стол</a></li>
+                                        <li><a href="/move/bar">Барный стул</a></li>
+                                        <li><a href="/move/couches">Диван</a></li>
+                                        <li><a href="/move/fridge">Холодильник</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
-                                    <h4>WOMEN FASHION</h4>
+                                    <h4>ЖЕНСКИЙ ВЫБОР</h4>
                                     <ul>
-                                        <li><a href="/move/mirror">Mirrors</a></li>
-                                        <li><a href="/move/bed">The beds</a></li>
-                                        <li><a href="/move/sofa">Sofas</a></li>
-                                        <li><a href="/move/oven">Ovens</a></li>
+                                        <li><a href="/move/mirror">Зеркало</a></li>
+                                        <li><a href="/move/bed">Кровать</a></li>
+                                        <li><a href="/move/sofa">Софа</a></li>
+                                        <li><a href="/move/oven">Духовка</a></li>
                                         <li><a href="/move/dress">
-                                            Dressing tables</a></li>
+                                            Туалетный стол</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
-                                    <h4>ACCESSORIES</h4>
+                                    <h4>АКСЕССУАРЫ</h4>
                                     <ul>
-                                        <li><a href="/move/clock">Clocks</a></li>
-                                        <li><a href="/move/curtain">Curtains</a></li>
-                                        <li><a href="/move/pouf">Poufs</a></li>
-                                        <li><a href="/move/painting">Paintings</a></li>
-                                        <li><a href="/move/box">Boxes</a></li>
+                                        <li><a href="/move/clock">Часы</a></li>
+                                        <li><a href="/move/curtain">Занавески</a></li>
+                                        <li><a href="/move/pouf">Пуф</a></li>
+                                        <li><a href="/move/painting">Картина</a></li>
+                                        <li><a href="/move/box">Коробка</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
-                                    <h4>OTHER</h4>
+                                    <h4>ДРУГОЕ</h4>
                                     <ul>
-                                        <li><a href="/move/garden">Garden furniture</a></li>
-                                        <li><a href="/move/tv">Furniture for TV</a></li>
-                                        <li><a href="/move/sink">Sinks</a></li>
-                                        <li><a href="/move/glove">Glove</a></li>
+                                        <li><a href="/move/garden">Садовый стол</a></li>
+                                        <li><a href="/move/tv">Тумба под телевизор</a></li>
+                                        <li><a href="/move/sink">Раковина</a></li>
+                                        <li><a href="/move/glove">Перчатка</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega_item">
@@ -208,7 +208,16 @@
     </div>
 </header>
 <!--================End Shop Header Area =================-->
-
+<section class="shop_banner_area dzsparallaxer auto-init dzsprx-readyall under-760"
+         data-options="{direction: &quot;reverse&quot;}" style="height: 555px;">
+    <%--    <div class="divimage dzsparallaxer--target "--%>
+    <%--         style="width: 100%; height: 150%; background-image: url(&quot;http://paul-themes.com/html/laptina/laptin-demo/laptina/img/shop-banner-img2.jpg&quot;); background-size: cover; transform: translate3d(0px, -163.4255px, 0px); background-position: initial initial; background-repeat: initial initial;"></div>--%>
+    <div class="container display-flex">
+        <div class="banner_inner_text flex">
+            <h3>Этот сайт является прототипом реального магазина</h3>
+        </div>
+    </div>
+</section>
 <!--================Shop Slider Area =================-->
 <section class="shop_slider_area">
     <div class="shop_slider_inner">
@@ -247,7 +256,7 @@
                              data-splitin="on"
                              data-splitout="none"
                              data-textAlign="['left','left','left','left']"
-                             data-responsive_offset="on">hello buyers! i am a
+                             data-responsive_offset="on">Купи меня!
                         </div>
                         <div class="tp-caption s_big_text"
                              data-x="['left','left','left','left','left','center']"
@@ -267,8 +276,7 @@
                              data-start="500"
                              data-splitout="none"
                              data-responsive_offset="on"
-                             data-elementdelay="0.05">Clearance Sales <br class="shop_br"/> up to 70% Off. All Sales are
-                            Final!
+                             data-elementdelay="0.05">Большие скидки до 70%<br class="shop_br"/>
                         </div>
                         <div class="tp-caption shop_btn"
                              data-x="['left','left','left','left','left','center']"
@@ -290,7 +298,7 @@
                              data-textAlign="['left','left','left','left']"
                              data-splitout="none"
                              data-responsive_offset="on">
-                            <a href="/move/pouf" class="shop_now_btn">Shop Now</a>
+                            <a href="/move/pouf" class="shop_now_btn">Купить сейчас</a>
                         </div>
                     </div>
                 </li>
@@ -323,7 +331,7 @@
                              data-splitin="on"
                              data-splitout="none"
                              data-textAlign="['left','left','left','left']"
-                             data-responsive_offset="on">hello buyers! i am a
+                             data-responsive_offset="on">Купи меня!
                         </div>
                         <div class="tp-caption s_big_text"
                              data-x="['left']"
@@ -343,7 +351,7 @@
                              data-start="500"
                              data-splitout="none"
                              data-responsive_offset="on"
-                             data-elementdelay="0.05">Clearance Sales <br/> up to 70% Off. All Sales are Final!
+                             data-elementdelay="0.05">Большие скидки до 70%<br/>
                         </div>
                         <div class="tp-caption shop_btn"
                              data-x="['left']"
@@ -365,13 +373,30 @@
                              data-textAlign="['left','left','left','left']"
                              data-splitout="none"
                              data-responsive_offset="on">
-                            <a href="/move/bed" class="shop_now_btn">Shop Now</a>
+                            <a href="/move/bed" class="shop_now_btn">Купить сейчас</a>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
+    <%--    <div class="famouse_category">--%>
+    <%--        <div class="cate_title">--%>
+    <%--            <h4><i class="fa fa-bars" aria-hidden="true"></i> Top Famous Categories</h4>--%>
+    <%--        </div>--%>
+    <%--        <ul>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>TV & Audio</a></li>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>TV & Audio</a></li>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Car Electronic & GPS</a></li>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Video Games & Consoles</a></li>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Laptops & Computers</a></li>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Cameras & Photography</a></li>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Smart Phones & Tablets</a></li>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Video Games & Consoles</a></li>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>TV & Audio</a></li>--%>
+    <%--            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Gadgets</a></li>--%>
+    <%--        </ul>--%>
+    <%--    </div>--%>
 </section>
 <!--================End Shop Slider Area =================-->
 
@@ -383,8 +408,8 @@
                 <div class="promotion_item">
                     <img height="620" width="470" src="http://pngimg.com/uploads/clock/clock_PNG6608.png" alt="">
                     <div class="promotion_text">
-                        <h4>THE NEW COLLECTIONS</h4>
-                        <h3>TOP FASHION</h3>
+                        <h4>ХИТ ПРОДАЖ</h4>
+                        <h3>НОВОЕ ПОСТУПЛЕНИЕ</h3>
                     </div>
                 </div>
             </div>
@@ -394,16 +419,16 @@
                          src="https://e-matras.ua/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/t/a/tablo_tv2.jpg"
                          alt="">
                     <div class="promotion_text">
-                        <h4>THE NEW COLLECTIONS</h4>
-                        <h3>TOP FASHION</h3>
+                        <h4>ХИТ ПРОДАЖ</h4>
+                        <h3>НОВОЕ ПОСТУПЛЕНИЕ</h3>
                     </div>
                 </div>
                 <div class="promotion_item">
                     <img height="310" width="670"
                          src="http://lastmag.ru/wp-content/uploads/2016/01/couch-the-simpsons.jpg" alt="">
                     <div class="promotion_text">
-                        <h4>THE NEW COLLECTIONS</h4>
-                        <h3>TOP FASHION</h3>
+                        <h4>ХИТ ПРОДАЖ</h4>
+                        <h3>НОВОЕ ПОСТУПЛЕНИЕ</h3>
                     </div>
                 </div>
             </div>

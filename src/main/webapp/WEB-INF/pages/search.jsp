@@ -113,8 +113,8 @@
         <%--</form>--%>
 
         <spring:form modelAttribute="productFromServer" method="post" action="/search/check">
-            <spring:input path="name" placeholder="product name"/>
-            <spring:button>Search</spring:button>
+            <spring:input path="name" placeholder="Название продукта"/>
+            <spring:button>Поиск</spring:button>
         </spring:form>
 
     </div>

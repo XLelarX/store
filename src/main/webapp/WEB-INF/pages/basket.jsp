@@ -9,7 +9,7 @@
         @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
         .login-page {
-            width: 200px;
+            width: 250px;
             padding: 8% 0 0;
             margin: auto;
         }
@@ -116,81 +116,82 @@
         if (BasketDB.getList() != null)
             for (Basket e : BasketDB.getList()) {
     %>
+
     <div class="form">
         <%=e.getProductId().getName()%>
 
-        <%if (e.getProductId().getName().equals("Glove")) {%>
+        <%if (e.getProductId().getId() == 12) {%>
         <a href="/basket/deleteGlove">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Table")) {
+        } else if (e.getProductId().getId() == 2) {
         %>
         <a href="/basket/deleteTable">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Box")) {
+        } else if (e.getProductId().getId() == 8) {
         %>
         <a href="/basket/deleteBox">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Armchair")) {
+        } else if (e.getProductId().getId() == 1) {
         %>
         <a href="/basket/deleteArmchair">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Mirror")) {
+        } else if (e.getProductId().getId() == 3) {
         %>
         <a href="/basket/deleteMirror">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Bed")) {
+        } else if (e.getProductId().getId() == 4) {
         %>
         <a href="/basket/deleteBed">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Clock")) {
+        } else if (e.getProductId().getId() == 5) {
         %>
         <a href="/basket/deleteClock">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Curtain")) {
+        } else if (e.getProductId().getId() == 6) {
         %>
         <a href="/basket/deleteCurtain">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Sink")) {
+        } else if (e.getProductId().getId() == 7) {
         %>
         <a href="/basket/deleteSink">X</a>
         <%
-        } else if (e.getProductId().getName().equals("TV_Table")) {
+        } else if (e.getProductId().getId() == 9) {
         %>
         <a href="/basket/deleteTV">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Bar_Chair")) {
+        } else if (e.getProductId().getId() == 10) {
         %>
         <a href="/basket/deleteBar">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Garden_Table")) {
+        } else if (e.getProductId().getId() == 11) {
         %>
         <a href="/basket/deleteGarden">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Pouf")) {
+        } else if (e.getProductId().getId() == 13) {
         %>
         <a href="/basket/deletePouf">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Painting")) {
+        } else if (e.getProductId().getId() == 14) {
         %>
         <a href="/basket/deletePainting">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Oven")) {
+        } else if (e.getProductId().getId() == 15) {
         %>
         <a href="/basket/deleteOven">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Dressing_Table")) {
+        } else if (e.getProductId().getId() == 18) {
         %>
         <a href="/basket/deleteDress">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Sofa")) {
+        } else if (e.getProductId().getId() == 19) {
         %>
         <a href="/basket/deleteSofa">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Couch")) {
+        } else if (e.getProductId().getId() == 17) {
         %>
         <a href="/basket/deleteCouch">X</a>
         <%
-        } else if (e.getProductId().getName().equals("Fridge")) {
+        } else if (e.getProductId().getId() == 16) {
         %>
         <a href="/basket/deleteFridge">X</a>
         <%}%>
@@ -199,7 +200,7 @@
     <%
             }
     %>
-    <a href="/move/main">Return to main menu</a></p>
+    <a href="/move/main">Вернуться в главное меню</a></p>
 </div>
 </body>
 </html>

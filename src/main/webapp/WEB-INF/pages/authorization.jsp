@@ -113,11 +113,11 @@
         <%--</form>--%>
 
         <spring:form modelAttribute="userFromServer" method="post" action="/authorization/check">
-            <spring:input path="login" placeholder="login"/>
-            <spring:input path="password" placeholder="password"/>
+            <spring:input path="login" placeholder="Логин"/>
+            <spring:input path="password" placeholder="Пароль"/>
 
-            <spring:button>Sign-in</spring:button>
-            <p class="message">Not registered? <a href="/registration/validate">Create an account</a></p>
+            <spring:button>Войти</spring:button>
+            <p class="message">Не зарегистритрованы? <a href="/registration/validate">Создайте аккаунт</a></p>
         </spring:form>
 
     </div>
